@@ -19,6 +19,19 @@
     </style>
 </head>
 <body>
+    <h2>Recorte de Líneas (Cohen-Sutherland)</h2>
+
+    <div>
+        <b>Coordenadas Vp</b><br>
+        x_min: <input type="number" id="x_min" value="150"><br>
+        x_max: <input type="number" id="x_max" value="100"><br>
+        y_min: <input type="number" id="y_min" value="450"><br>
+        y_max: <input type="number" id="y_max" value="300"><br>
+       <button onclick="updateViewport()">Actualizar VP</button>
+    </div>
+
+
+
     <canvas id="myCanvas" width="400" height="400"></canvas>
 </body>
 </html>
