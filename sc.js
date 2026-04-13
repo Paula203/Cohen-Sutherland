@@ -61,4 +61,17 @@ function cohenSutherland(x1, y1, x2, y2) {
                 x = xmin;
             }
 
+            if (outcodeOut === outcode1) {
+                x1 = x;
+                y1 = y;
+                outcode1 = computeOutCode(x1, y1);
+            } else {
+                x2 = x;
+                y2 = y;
+                outcode2 = computeOutCode(x2, y2);
+            }
+        }
+    }
 
+    return accept ? [x1, y1, x2, y2] : null;
+}
