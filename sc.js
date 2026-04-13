@@ -97,4 +97,11 @@ function drawPoint(x, y, color) {
     ctx.fill();
 }
 
-
+function drawLine(x1, y1, x2, y2, color) {
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+}
