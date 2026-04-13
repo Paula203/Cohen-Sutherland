@@ -75,3 +75,11 @@ function cohenSutherland(x1, y1, x2, y2) {
 
     return accept ? [x1, y1, x2, y2] : null;
 }
+
+function drawPoint(x, y, color) {
+    ctx.beginPath();
+    ctx.arc (x, y, 5, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+}
+
