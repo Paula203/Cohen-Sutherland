@@ -47,4 +47,18 @@ function cohenSutherland(x1, y1, x2, y2) {
             let x, y;
             let outcodeOut = outcode1 ? outcode1 : outcode2;
 
-            
+            if (outcodeOut & TOP) {
+                x = x1 + (x2 - x1) * (ymax - y1) / (y2 - y1);
+                y = ymax;
+            } else if (outcodeOut & BOTTOM) {
+                x = x1 + (x2 - x1) * (ymin - y1) / (y2 - y1);
+                y = ymin;
+            } else if (outcodeOut & RIGHT) {
+                y = y1 + (y2 - y1) * (xmax - x1) / (x2 - x1);
+                x = xmax;
+            } else if (outcodeOut & LEFT) {
+                y = y1 + (y2 - y1) * (xmin - x1) / (x2 - x1);
+                x = xmin;
+            }
+
+
