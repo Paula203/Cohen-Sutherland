@@ -20,3 +20,15 @@ function updateViewport() {
     draw();
 }
 
+function computeOutCode(x, y) {
+    let code = INSIDE;  
+
+    if (x < xmin) code |= LEFT;
+    else if (x > xmax) code |= RIGHT;
+
+    if (y < ymin) code |= BOTTOM;
+    else if (y > ymax) code |= TOP;
+
+    return code;
+}
+
