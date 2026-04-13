@@ -115,3 +115,8 @@ function addLine() {
     lines.push({ x1, y1, x2, y2 });
     draw();
 }
+
+function clearCanvas() {
+    lines = [];
+    draw();
+}
