@@ -76,10 +76,25 @@ function cohenSutherland(x1, y1, x2, y2) {
     return accept ? [x1, y1, x2, y2] : null;
 }
 
+function drawWindow() {
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(xmin, ymin, xmax - xmin, ymax - ymin);
+
+    ctx.fillStyle = "black";
+    ctx.font = "14px Arial";
+    ctx.fillText(
+    `Coord. VP = (${xmin}, ${ymin}) - (${xmax}, ${ymax})`, 
+    10,
+    20
+    );
+}
+
 function drawPoint(x, y, color) {
     ctx.beginPath();
     ctx.arc (x, y, 5, 0, Math.PI * 2);
     ctx.fillStyle = color;
     ctx.fill();
 }
+
 
