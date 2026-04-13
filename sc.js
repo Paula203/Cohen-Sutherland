@@ -1,8 +1,8 @@
 const canvas = document.getElementById("Canvas");
 const ctx = canvas.getContext("2d");
 
-let xmin = 150, ymin = 100
-let xmax = 450, ymax = 400;
+let xmin = 100, ymin = 50;
+let xmax = 500, ymax = 350;
 
 const INSIDE = 0;
 const LEFT = 1;
