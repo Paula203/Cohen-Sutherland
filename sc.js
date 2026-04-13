@@ -105,3 +105,13 @@ function drawLine(x1, y1, x2, y2, color) {
     ctx.lineWidth = 2;
     ctx.stroke();
 }
+
+function addLine() {
+    const x1 = parseFloat(document.getElementById("x1").value);
+    const y1 = parseFloat(document.getElementById("y1").value);
+    const x2 = parseFloat(document.getElementById("x2").value);
+    const y2 = parseFloat(document.getElementById("y2").value);
+
+    lines.push({ x1, y1, x2, y2 });
+    draw();
+}
