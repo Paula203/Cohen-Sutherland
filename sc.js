@@ -120,3 +120,29 @@ function clearCanvas() {
     lines = [];
     draw();
 }
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawWindow();
+
+    drawWindow();
+
+    lines.forEach(line => {
+        let [x1, y1, x2, y2] = line;
+
+        let clipped = cohenSutherland(x1, y1, x2, y2);
+
+        if (clipped) {
+            drawLine(x1, y1, x2, y2, "#cccccc");
+            drawLine(clipped[0], clipped[1], clipped[2], clipped[3], 
+"green");
+    } else {
+            drawLine(x1, y1, x2, y2, "red");
+        }
+
+        drawPoint(x1, y1, "blue");
+        drawPoint(x2, y2, "orange");
+    });
+}
+
+draw();
