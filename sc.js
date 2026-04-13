@@ -11,3 +11,12 @@ const BELOW = 4;
 const ABOVE = 8; 
 
 let lines = [];
+
+function updateViewport() {
+    xmin = parseFloat(document.getElementById("xmin").value);
+    ymin = parseFloat(document.getElementById("ymin").value);
+    xmax = parseFloat(document.getElementById("xmax").value);
+    ymax = parseFloat(document.getElementById("ymax").value);
+    draw();
+}
+
