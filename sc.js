@@ -32,3 +32,19 @@ function computeOutCode(x, y) {
     return code;
 }
 
+function cohenSutherland(x1, y1, x2, y2) {
+    let outcode1 = computeOutCode(x1, y1);
+    let outcode2 = computeOutCode(x2, y2);
+    let accept = false;
+
+    while (true) {
+        if (!(outcode1 | outcode2)) {
+            accept = true;
+            break;
+        } else if (outcode1 & outcode2) {
+            break;
+        } else {
+            let x, y;
+            let outcodeOut = outcode1 ? outcode1 : outcode2;
+
+            
