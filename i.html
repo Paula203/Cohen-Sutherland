@@ -29,7 +29,19 @@
         y_max: <input type="number" id="y_max" value="300"><br>
        <button onclick="updateViewport()">Actualizar VP</button>
     </div>
-
+<br> 
+<div>
+    Punto A:
+    x1: <input type="number" id="x1" value="100">
+    y1: <input type="number" id="y1" value="50">
+    <br>
+    Punto B:
+    x2: <input type="number" id="x2" value="500">
+    y2: <input type="number" id="y2" value="350">
+    <br>
+    <button onclick="addLine()">Agregar Línea</button>
+    <button onclick="clearCanvas()">Limpiar Canvas</button>
+<br>
 
 
     <canvas id="myCanvas" width="400" height="400"></canvas>
