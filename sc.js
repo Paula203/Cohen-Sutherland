@@ -1,22 +1,22 @@
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("Canvas");
 const ctx = canvas.getContext("2d");
 
-let xmin = 150, ymin = 100;
+let xmin = 150, ymin = 100
 let xmax = 450, ymax = 400;
 
 const INSIDE = 0;
 const LEFT = 1;
 const RIGHT = 2;
-const BELOW = 4;
-const ABOVE = 8; 
+const BOTTOM = 4;
+const TOP = 8; 
 
 let lines = [];
 
 function updateViewport() {
-    xmin = parseFloat(document.getElementById("xmin").value);
-    ymin = parseFloat(document.getElementById("ymin").value);
-    xmax = parseFloat(document.getElementById("xmax").value);
-    ymax = parseFloat(document.getElementById("ymax").value);
+    xmin = parseFloat(document.getElementById("x_min").value);
+    ymin = parseFloat(document.getElementById("y_min").value);
+    xmax = parseFloat(document.getElementById("x_max").value);
+    ymax = parseFloat(document.getElementById("y_max").value);
     draw();
 }
 
@@ -112,7 +112,7 @@ function addLine() {
     const x2 = parseFloat(document.getElementById("x2").value);
     const y2 = parseFloat(document.getElementById("y2").value);
 
-    lines.push({ x1, y1, x2, y2 });
+    lines.push([x1, y1, x2, y2]);
     draw();
 }
 
@@ -123,8 +123,6 @@ function clearCanvas() {
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawWindow();
-
     drawWindow();
 
     lines.forEach(line => {
